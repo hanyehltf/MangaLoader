@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.fragments.MangaListFragment"
+
+    >
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        app:alignContent="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_alignSelf="center"
+       >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15sp"
+            android:layoutDirection="rtl"
+            android:padding="0dp"
+
+            app:fastScrollEnabled="true"
+            app:fastScrollHorizontalThumbDrawable="@drawable/thumbe_drawable"
+            app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+            app:fastScrollVerticalThumbDrawable="@drawable/thumbe_drawable"
+            app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/mangaListprogressBar"
+
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+
+            android:layout_centerInParent="true"
+            app:layout_constraintTop_toTopOf="@id/recyclerView"
+            app:layout_constraintLeft_toLeftOf="@id/recyclerView"
+            app:layout_constraintRight_toRightOf="@id/recyclerView"
+            app:layout_constraintBottom_toBottomOf="@id/recyclerView"
+            app:mlpb_arrow_height="5sp"
+            app:mlpb_arrow_width="5sp"
+
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_progress_color="@color/indigo"
+            app:mlpb_progress_text_size="15sp"
+            app:mlpb_progress_stoke_width="5sp"
+            app:mlpb_progress_text_visibility="visible"
+            app:mlpb_show_arrow="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</FrameLayout>

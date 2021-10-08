@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.flexbox.FlexboxLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:flexWrap="wrap"
+    app:alignItems="stretch"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.project.mangaloader.ui.view.ListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+ >
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/category_text"
+     tools:text="555555"
+     android:layout_gravity="right"
+     android:gravity="right"
+android:textDirection="rtl"
+     android:shadowColor="#737070"
+     android:layout_marginRight="20dp"
+     android:layout_marginTop="0dp"
+     android:layout_marginBottom="0dp"
+     android:layout_marginLeft="16dp"
+     android:textStyle="italic|bold"
+     android:fontFamily="@font/hekayatfont"
+     android:textColor="@color/indigo"
+     android:textSize="20dp"
+
+
+     />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="right"
+    android:layout_marginTop="5dp"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:textDirection="rtl"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="0dp"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:id="@+id/child_rec"
+        />
+
+</LinearLayout>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="نمایش همه "
+    android:textSize="16dp"
+    android:layout_gravity="left"
+    android:layout_marginTop="0dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="100dp"
+
+    android:backgroundTint="@color/white"
+    android:textColor="@color/indigo"
+    android:id="@+id/gotopage"
+    android:fontFamily="@font/hekayatfont"
+    />
+
+</LinearLayout>
+</com.google.android.flexbox.FlexboxLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/manga_info_drawble"
+    android:layoutDirection="ltr"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.Activities.MangaInfoActivity">
+
+
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+
+    >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/white"
+        app:expandedTitleMarginStart="48dp"
+        app:expandedTitleMarginEnd="64dp"
+
+
+
+        >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backfrommangainfo"
+                android:layout_margin="10dp"
+                android:layoutDirection="ltr"
+                android:src="@mipmap/ic_back"
+                />
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+android:id="@+id/cover_info"
+        android:background="@color/grey_default"
+        android:padding="0dp"
+        app:cardCornerRadius="5sp"
+        app:cardElevation="5sp"
+        android:layout_marginBottom="5sp"
+android:layout_marginEnd="10sp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintLeft_toRightOf="@id/manga_header_rec"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/manga_info_cover"
+            android:layout_width="150sp"
+            android:layout_height="200sp"
+            android:layout_gravity="end"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="5sp"
+            android:background="@drawable/shape"
+android:layoutDirection="ltr"
+            android:scaleType="fitXY"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manga_header_rec"
+        android:layout_width="wrap_content"
+android:layout_marginTop="?actionBarSize"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5sp"
+        android:layoutDirection="rtl"
+        
+android:orientation="vertical"
+        android:textDirection="rtl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/cover_info"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layoutDirection="ltr"
+      android:layout_height="wrap_content"
+      app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+      >
+
+
+      <com.google.android.material.tabs.TabLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/manga_info_tabs"
+          android:layoutDirection="ltr"
+          android:background="#4B0082"
+          app:tabTextAppearance="?android:attr/textAppearanceMedium"
+          app:tabTextColor="@color/white"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginRight="5dp"
+          android:layout_marginLeft="5dp"
+
+          />
+
+      <androidx.viewpager.widget.ViewPager
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="?actionBarSize"
+          android:id="@+id/viewpager"
+
+          />
+      <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+          android:id="@+id/infoprogressBar"
+
+          app:mlpb_show_arrow="true"
+          app:mlpb_arrow_height="10dp"
+          app:mlpb_arrow_width="10dp"
+          app:mlpb_enable_circle_background="true"
+          android:layout_centerInParent="true"
+          app:mlpb_max="100"
+          android:visibility="gone"
+          app:mlpb_progress_color="@color/indigo"
+          app:mlpb_progress_stoke_width="5dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+  </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

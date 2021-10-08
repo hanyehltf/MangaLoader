@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.flexbox.FlexboxLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:flexWrap="wrap"
+    app:alignItems="stretch"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.Activities.HomeActivity"
+    android:id="@+id/coordinator_main">
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mani_viewpager"
+            android:layout_marginBottom="?actionBarSize"
+            android:layoutDirection="ltr"
+
+            />
+
+
+
+
+        <include layout="@layout/navigationbottom"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>

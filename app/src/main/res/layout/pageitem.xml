@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:bufferType="normal"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_number_id"
+    android:textColor="@color/indigo"
+    android:padding="0dp"
+    android:autoSizeTextType="uniform"
+android:gravity="center"
+    android:layout_gravity="right"
+    android:layoutDirection="rtl"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="2dp"
+    android:textSize="16sp"
+    tools:text="55"
+    android:textColorHint="@color/indigo"
+    android:backgroundTint="@color/white"
+
+    >
+
+</Button>

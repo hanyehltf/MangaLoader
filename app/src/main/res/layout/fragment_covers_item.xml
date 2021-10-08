@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/list_download"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layoutDirection="ltr"
+    app:layoutManager="LinearLayoutManager"
+    app:fastScrollEnabled="true"
+    app:fastScrollHorizontalThumbDrawable="@drawable/thumbe_drawable"
+    app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+    app:fastScrollVerticalThumbDrawable="@drawable/thumbe_drawable"
+    app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"
+    tools:context=".ui.view.fragments.CoversFragment"
+    tools:listitem="@layout/download_row_item"
+    xmlns:tools="http://schemas.android.com/tools" />
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/coversprogressBar"
+
+        app:mlpb_show_arrow="true"
+        app:mlpb_arrow_height="15dp"
+        app:mlpb_arrow_width="15dp"
+        app:mlpb_enable_circle_background="true"
+        android:layout_centerInParent="true"
+        app:mlpb_max="100"
+        app:mlpb_progress_color="@color/indigo"
+        app:mlpb_progress_stoke_width="5dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+</RelativeLayout>

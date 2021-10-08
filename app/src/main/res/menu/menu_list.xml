@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+        <item
+            android:id="@+id/library"
+
+            android:title="کتابخانه"
+            android:checked="true"
+            android:color="@color/purple_500"
+
+
+            
+   />
+
+        <item
+            android:id="@+id/list"
+            android:title="لیست "
+            android:color="@color/purple_500"/>
+        <item
+            android:id="@+id/category"
+            android:title="دسته بندی"
+            android:color="@color/purple_500"/>
+
+
+
+
+    </menu>
+

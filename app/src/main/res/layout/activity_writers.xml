@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.Activities.WritersActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/indigo"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/backWriter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+android:layout_alignParentLeft="true"
+                    android:layout_margin="15dp"
+                    android:background="@color/indigo"
+                    android:src="@drawable/ic_back_foreground" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/hekayatfont"
+                    android:gravity="center"
+                    android:autoSizeTextType="uniform"
+                    android:id="@+id/titleofPage"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layoutDirection="rtl"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:text="555555" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/writer_Rec"
+        android:layout_marginTop="?actionBarSize"
+        />
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/writerprogress"
+
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:mlpb_progress_text_size="15dp"
+        android:layout_gravity="center"
+
+        app:mlpb_arrow_height="20sp"
+        app:mlpb_arrow_width="10dp"
+        app:mlpb_enable_circle_background="true"
+        app:mlpb_max="100"
+        app:mlpb_progress_color="@color/indigo"
+        app:mlpb_progress_stoke_width="5dp"
+        app:mlpb_progress_text_visibility="visible"
+        app:mlpb_show_arrow="true" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

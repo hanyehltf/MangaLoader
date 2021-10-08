@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView android:id="@+id/manga_info_item_txt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    android:layout_marginStart="4sp"
+    android:elevation="2sp"
+    android:fontFamily="@font/hekayatfont"
+    android:gravity="right"
+    android:layout_gravity="right"
+    android:autoSizeTextType="uniform"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:textColor="@color/purple_700"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    tools:text="نام"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" />

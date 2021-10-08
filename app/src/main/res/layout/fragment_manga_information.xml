@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.fragments.MangaInformationFragment">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:flexWrap="wrap"
+        app:alignItems="stretch"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/addToLib_btn"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="10sp"
+            android:fontFamily="@font/hekayatfont"
+            android:outlineSpotShadowColor="@color/grey_cool"
+            android:src="@drawable/ic_baseline_library_add_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/manga_info_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layoutDirection="rtl"
+            android:textDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.283"
+            app:layout_constraintLeft_toLeftOf="@id/addToLib_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.286" />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/framInfoprogressBar"
+            android:visibility="gone"
+
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            app:mlpb_progress_text_size="15sp"
+            android:layout_gravity="bottom|center"
+            app:layout_constraintBottom_toBottomOf="@+id/manga_info_list"
+            app:layout_constraintEnd_toEndOf="@+id/manga_info_list"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/manga_info_list"
+            app:layout_constraintTop_toTopOf="@+id/manga_info_list"
+            app:mlpb_arrow_height="10sp"
+            app:mlpb_arrow_width="15sp"
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_max="100"
+            app:mlpb_progress_color="@color/indigo"
+            app:mlpb_progress_stoke_width="5sp"
+            app:mlpb_show_arrow="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</FrameLayout>

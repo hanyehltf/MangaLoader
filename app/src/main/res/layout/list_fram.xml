@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.flexbox.FlexboxLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:flexWrap="wrap"
+    app:alignItems="stretch"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:id="@+id/list_activity_coordinator"
+    app:layout_alignSelf="stretch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_rec"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+
+            android:padding="0dp"
+            app:fastScrollEnabled="true"
+            app:fastScrollHorizontalThumbDrawable="@drawable/thumbe_drawable"
+            app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+            app:fastScrollVerticalThumbDrawable="@drawable/thumbe_drawable"
+            app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+
+    <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+        android:id="@+id/listprogressBar"
+
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:mlpb_progress_text_size="15sp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/list_rec"
+        app:layout_constraintStart_toStartOf="@+id/list_rec"
+        app:layout_constraintTop_toTopOf="@+id/list_rec"
+        app:mlpb_arrow_height="10sp"
+        app:mlpb_arrow_width="10sp"
+        app:mlpb_enable_circle_background="true"
+        app:mlpb_max="100"
+        app:mlpb_progress_color="@color/indigo"
+        app:mlpb_progress_stoke_width="5sp"
+        app:mlpb_progress_text_visibility="visible"
+        app:mlpb_show_arrow="true" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="@id/list_rec"
+        app:layout_constraintLeft_toLeftOf="@id/list_rec"
+        app:layout_constraintRight_toRightOf="@id/list_rec"
+
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:src="@drawable/ic_next_arrow_back_ios_24" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/page_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal"
+
+            android:padding="0dp"
+            android:textDirection="rtl" />
+
+        <ImageButton
+            android:id="@+id/prev_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+
+            android:src="@drawable/ic_prev_arrow_forward_ios_24" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.flexbox.FlexboxLayout>

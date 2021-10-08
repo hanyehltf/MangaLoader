@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528319363221",
+    "project_id": "mangaloader-cace8",
+    "storage_bucket": "mangaloader-cace8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528319363221:android:d79a01ca059dedd75f039c",
+        "android_client_info": {
+          "package_name": "com.project.mangaloader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528319363221-21hv7n7gho26ad76va52hmu6s77vud3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCwpiuE_y8-UncSZRf3fe6U92tTTqTGho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528319363221-21hv7n7gho26ad76va52hmu6s77vud3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

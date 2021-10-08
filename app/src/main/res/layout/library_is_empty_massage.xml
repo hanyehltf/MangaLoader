@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400sp"
+    android:layout_height="70sp"
+    android:id="@+id/library_is_empty"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="5sp"
+    android:layout_marginRight="5sp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16sp"
+    app:cardCornerRadius="10sp"
+    android:background="@color/grey_default"
+android:layout_centerInParent="true"
+    app:cardElevation="7sp"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/indigo"
+
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hekayatfont"
+            android:layout_gravity="center|top"
+            android:layout_margin="5sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:text="اوپس.."
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hekayatfont"
+            android:layout_gravity="center|top"
+            android:textColor="@color/white"
+            android:autoSizeTextType="uniform"
+            android:textStyle="bold"
+            android:text="شما مانگایی به کتابخانه اضافه نکرده اید"
+            android:textSize="16sp"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
