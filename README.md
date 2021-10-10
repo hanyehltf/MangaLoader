@@ -5,6 +5,10 @@
 برای استفاده از مانگالودر ابتدا باید وی پی ان خود را روشن کنید
 
 ![کاتالوگ](https://user-images.githubusercontent.com/71148149/136698722-989eca01-1f8e-4629-82de-bba4c2e424a8.jpg)
+لیست مانگا ها از بین مانگا های موجود در سایت مانگالودر میباشد 
 ![کتابخانه](https://user-images.githubusercontent.com/71148149/136698727-9c55f555-e1fe-4418-afb8-9950f0aff1cf.jpg)
+قابلیت اضافه کردن به کتابخانه 
 ![مترجم ها](https://user-images.githubusercontent.com/71148149/136698733-5567b0f5-0659-4927-bc47-c657205e5442.jpg)
+قابلیت انتخاب کردن از بین مترجم های مانگا
 ![منو](https://user-images.githubusercontent.com/71148149/136698741-1b5dd8cc-63de-4ff4-8852-5e5f46e2b866.jpg)
+دانلود و خواندن 
