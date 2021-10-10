@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.google.android.flexbox.FlexboxLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:flexWrap="wrap"
-    app:alignItems="stretch"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -37,4 +30,3 @@ app:itemTextAppearanceInactive="?android:attr/textAppearanceMedium"
 
        android:layout_gravity="center"/>
 </androidx.cardview.widget.CardView>
-</com.google.android.flexbox.FlexboxLayout>

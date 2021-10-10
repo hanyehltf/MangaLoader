@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/backfrommangainfo"
                 android:layout_margin="10dp"
+
                 android:layoutDirection="ltr"
                 android:src="@mipmap/ic_back"
                 />
@@ -53,6 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
 android:id="@+id/cover_info"
+        app:cardUseCompatPadding="true"
+
         android:background="@color/grey_default"
         android:padding="0dp"
         app:cardCornerRadius="5sp"

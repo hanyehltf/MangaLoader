@@ -6,6 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="20dp"
+    app:cardUseCompatPadding="true"
+
     android:layout_marginRight="20dp"
     android:layout_marginBottom="20dp"
     android:background="#80FFFFFF"
@@ -14,8 +16,8 @@
     app:cardElevation="7dp">
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
             android:layout_margin="10dp"
             tools:text="454545464"
             android:textSize="20sp"

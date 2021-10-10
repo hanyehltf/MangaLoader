@@ -7,7 +7,7 @@
     android:id="@+id/page_number_id"
     android:textColor="@color/indigo"
     android:padding="0dp"
-    android:autoSizeTextType="uniform"
+
 android:gravity="center"
     android:layout_gravity="right"
     android:layoutDirection="rtl"
