@@ -5,6 +5,19 @@ plugins {
 apply plugin: 'realm-android'
 
 android {
+
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    signingConfigs {
+        config {
+            storeFile file('C:\\Users\\ASUS\\key10.jks')
+            storePassword 'sadra1356'
+            keyPassword 'sadra1356'
+            keyAlias 'key10'
+        }
+    }
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
