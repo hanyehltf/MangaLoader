@@ -31,6 +31,11 @@ import com.project.mangaloader.data.model.Chapter;
 
 import static android.content.ContentValues.TAG;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 public class DownloadTask {
 
 
@@ -39,7 +44,7 @@ public class DownloadTask {
     private DownloadAdaptor downloadAdaptor;
     private Chapter chapter;
     final String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.ACCESS_MEDIA_LOCATION};
+            Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
     public DownloadTask(Context context, DownloadAdaptor downloadAdaptor, Chapter chapter) {
 
         this.context = context;
@@ -94,7 +99,6 @@ public class DownloadTask {
         Runnable runnable=new Runnable() {
             @Override
             public void run() {
-
 
                 id[0] = PRDownloader.download(chapter.getUrl(), chapter.getFile_path(), chapter.getFile_Name()).build()
                         .setOnProgressListener(new OnProgressListener() {

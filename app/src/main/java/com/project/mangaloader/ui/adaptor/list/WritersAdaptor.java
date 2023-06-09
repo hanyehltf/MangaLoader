@@ -61,7 +61,7 @@ public class WritersAdaptor extends RecyclerView.Adapter<WritersAdaptor.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.category_item);
+            textView = (TextView) itemView.findViewById(R.id.category_item);
         }
     }
 }

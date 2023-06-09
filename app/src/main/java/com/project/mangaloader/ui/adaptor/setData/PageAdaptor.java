@@ -99,7 +99,7 @@ public class PageAdaptor extends RecyclerView.Adapter<PageAdaptor.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            button = itemView.findViewById(R.id.page_number_id);
+            button = (Button) itemView.findViewById(R.id.page_number_id);
         }
     }
 }

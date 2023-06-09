@@ -72,8 +72,8 @@ public class MangaListPageAdaptor extends RecyclerView.Adapter<MangaListPageAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.homeList_cover);
-            title = itemView.findViewById(R.id.homeList_item);
+            imageView = (ImageView) itemView.findViewById(R.id.homeList_cover);
+            title = (TextView) itemView.findViewById(R.id.homeList_item);
         }
     }
 }

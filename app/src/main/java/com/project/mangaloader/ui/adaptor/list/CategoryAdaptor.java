@@ -87,7 +87,7 @@ break;
             super(itemView);
 
 
-            textView = itemView.findViewById(R.id.item_txt);
+            textView = (TextView) itemView.findViewById(R.id.item_txt);
         }
     }
 }

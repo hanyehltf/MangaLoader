@@ -63,7 +63,7 @@ public class GeneraAdaptor extends RecyclerView.Adapter<GeneraAdaptor.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.category_item);
+            textView = (TextView) itemView.findViewById(R.id.category_item);
         }
     }
 }

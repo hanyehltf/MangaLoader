@@ -187,12 +187,12 @@ public class DownloadAdaptor extends RecyclerView.Adapter<DownloadAdaptor.ViewHo
 Runnable runnable=new Runnable() {
     @Override
     public void run() {
-        downloaded_size = itemView.findViewById(R.id.downloaded_size_txt);
-        downloaded_statuse = itemView.findViewById(R.id.status_txt);
-        pause_resum = itemView.findViewById(R.id.pause_resume);
-        readOnline=itemView.findViewById(R.id.readOnline);
-        downloadProgress = itemView.findViewById(R.id.download_progress);
-        file_name = itemView.findViewById(R.id.file_name);
+        downloaded_size = (TextView) itemView.findViewById(R.id.downloaded_size_txt);
+        downloaded_statuse = (TextView) itemView.findViewById(R.id.status_txt);
+        pause_resum = (Button) itemView.findViewById(R.id.pause_resume);
+        readOnline= (Button) itemView.findViewById(R.id.readOnline);
+        downloadProgress = (ProgressBar) itemView.findViewById(R.id.download_progress);
+        file_name = (TextView) itemView.findViewById(R.id.file_name);
     }
 };runnable.run();
 

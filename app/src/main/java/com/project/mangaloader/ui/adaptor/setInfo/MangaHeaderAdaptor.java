@@ -52,7 +52,7 @@ public class MangaHeaderAdaptor extends RecyclerView.Adapter<MangaHeaderAdaptor.
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-            item = itemView.findViewById(R.id.manga_header_item_txt);
+            item = (TextView) itemView.findViewById(R.id.manga_header_item_txt);
         }
     }
 }

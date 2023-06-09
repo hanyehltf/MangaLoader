@@ -31,7 +31,7 @@ public class CreateDB extends SQLiteOpenHelper {
 
 
     public static String DATABASE_NAME = "mangareader";
-    public static String URL_M = "https://mangaloader.site";
+    public static String URL_M = "http://myloader1.site/";
     private List<Category> categories;
     private List<Genera> generaList;
     private List<Style> styles;

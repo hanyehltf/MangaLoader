@@ -32,7 +32,7 @@ public class NetworkConnection extends AsyncTask<String, String, String> {
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnected()) {
             try {
-                URL url = new URL("https://mangaloader.site/");
+                URL url = new URL("http://myloader1.site/");
                 HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
                 urlc.setRequestProperty("User-Agent", "test");
                 urlc.setRequestProperty("Connection", "close");

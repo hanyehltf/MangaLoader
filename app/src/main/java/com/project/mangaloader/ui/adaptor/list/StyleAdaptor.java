@@ -62,7 +62,7 @@ public class StyleAdaptor extends RecyclerView.Adapter<StyleAdaptor.ViewHolder> 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.category_item);
+            textView = (TextView) itemView.findViewById(R.id.category_item);
         }
     }
 }

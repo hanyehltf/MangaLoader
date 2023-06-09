@@ -92,10 +92,10 @@ public class MangasQueries extends AsyncTask<Void, Integer, String> {
 
 
     public static List<Manga> getManga(CreateDB createDB) {
-        List<Manga> mangaList = new ArrayList<>();
+        final List<Manga> mangaList = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = createDB.getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM  " + MANGAS_T, null);
+        final Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM  " + MANGAS_T, null);
 
         if (cursor.getCount() > 0 && cursor.moveToNext()) {
             cursor.moveToFirst();

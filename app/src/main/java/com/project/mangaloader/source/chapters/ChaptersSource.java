@@ -2,6 +2,7 @@ package com.project.mangaloader.source.chapters;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Environment;
 import android.view.View;
 
@@ -16,6 +17,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,22 +68,35 @@ public class ChaptersSource extends AsyncTask<Void, Integer, String> {
                 for (int i = 0; i < element.size(); i++) {
 
                     Chapter chapter = new Chapter();
-                    String name=e.select("span").eq(0).text();
-                    name=name.substring(name.lastIndexOf(":")+1);
+                    String name = e.select("span").eq(0).text();
+                    name = name.substring(name.lastIndexOf(":") + 1);
                     chapter.setManga_name(name);
-chapter.setReadOnlineUrl(element.select("div.chapleft").select("div.b").select("a").eq(i).attr("href"));
+                    chapter.setReadOnlineUrl(element.select("div.chapleft").select("div.b").select("a").eq(i).attr("href"));
                     chapter.setTitle(element.select("div.chapright").eq(i).text());
                     chapter.setUrl(element.select("div.chapleft").select("div.a").select("a").eq(i).attr("href"));
 
-if(!chapter.getUrl().equalsIgnoreCase("")) {
-    String extension = chapter.getUrl().substring(chapter.getUrl().lastIndexOf("."));
-    String fileName = chapter.getManga_name() + " "+chapter.getTitle() + extension;
-    chapter.setFile_Name(fileName);
-    String downloadPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-            .getAbsolutePath();
-    chapter.setFile_path(downloadPath);
-    chapterList.add(chapter);
-}
+                    if (!chapter.getUrl().equalsIgnoreCase("")) {
+                        String chapterUrl = chapter.getUrl().replace("https", "http");
+                        chapter.setUrl(chapterUrl);
+                        String extension = chapter.getUrl().substring(chapter.getUrl().lastIndexOf("."));
+                        String fileName = chapter.getManga_name() + " " + chapter.getTitle() + extension;
+                        chapter.setFile_Name(fileName);
+                        String downloadPath = null;
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                            downloadPath = Environment.getStorageDirectory().getAbsolutePath();
+                        } else {
+
+                            downloadPath = Environment.getExternalStorageDirectory()
+                                    .getAbsolutePath();
+                            File file = new File(downloadPath);
+                            if (!file.exists()) {
+                                file.mkdirs();
+                        }
+                    }
+                        chapter.setFile_path(downloadPath);
+                        chapterList.add(chapter);
+                    }
 
                 }
 
@@ -100,6 +115,6 @@ if(!chapter.getUrl().equalsIgnoreCase("")) {
     @Override
     protected void onCancelled(String s) {
         super.onCancelled(s);
-        NetworkErrorConnection networkErrorConnection=new NetworkErrorConnection(context);
+        NetworkErrorConnection networkErrorConnection = new NetworkErrorConnection(context);
     }
 }

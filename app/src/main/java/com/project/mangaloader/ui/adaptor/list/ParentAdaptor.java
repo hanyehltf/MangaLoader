@@ -82,9 +82,9 @@ public class ParentAdaptor extends RecyclerView.Adapter<ParentAdaptor.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            childe_rec = itemView.findViewById(R.id.child_rec);
-            title = itemView.findViewById(R.id.category_text);
-            gotoPage = itemView.findViewById(R.id.gotopage);
+            childe_rec = (RecyclerView) itemView.findViewById(R.id.child_rec);
+            title = (TextView) itemView.findViewById(R.id.category_text);
+            gotoPage = (Button) itemView.findViewById(R.id.gotopage);
 
         }
     }

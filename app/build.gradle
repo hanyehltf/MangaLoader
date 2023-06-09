@@ -10,25 +10,26 @@ android {
     lintOptions {
         checkReleaseBuilds false
     }
-    signingConfigs {
-        config {
-            storeFile file('C:\\Users\\ASUS\\key10.jks')
-            storePassword 'sadra1356'
-            keyPassword 'sadra1356'
-            keyAlias 'key10'
-        }
-    }
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdk 30
+    //    signingConfigs {
+//        config {
+//            storeFile file('C:\\Users\\ASUS\\key10.jks')
+//            storePassword 'sadra1356'
+//            keyPassword 'sadra1356'
+//            keyAlias 'key10'
+//        }
+//    }
+    buildToolsVersion '30.0.0'
 
     defaultConfig {
         applicationId "com.project.mangaloader"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdk 30
         versionCode 10
         versionName "10.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {

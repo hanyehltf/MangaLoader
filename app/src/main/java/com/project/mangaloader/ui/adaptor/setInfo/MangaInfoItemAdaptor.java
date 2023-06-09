@@ -51,7 +51,7 @@ public class MangaInfoItemAdaptor extends RecyclerView.Adapter<MangaInfoItemAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            item = itemView.findViewById(R.id.manga_info_item_txt);
+            item = (TextView) itemView.findViewById(R.id.manga_info_item_txt);
         }
     }
 

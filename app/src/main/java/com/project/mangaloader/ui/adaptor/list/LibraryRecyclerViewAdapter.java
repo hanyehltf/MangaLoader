@@ -1,7 +1,9 @@
 package com.project.mangaloader.ui.adaptor.list;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -47,9 +49,9 @@ public class LibraryRecyclerViewAdapter extends RecyclerView.Adapter<LibraryRecy
         return new ViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
 
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Runnable runnable = new Runnable() {
             @Override

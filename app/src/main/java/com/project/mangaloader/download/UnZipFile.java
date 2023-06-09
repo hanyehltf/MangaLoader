@@ -69,8 +69,7 @@ public class UnZipFile extends AsyncTask<String, String, String> {
         for (Chapter chapter : chapterList) {
 
             try {
-                File file = new File(Environment.getExternalStoragePublicDirectory(
-                        Environment.DIRECTORY_DOWNLOADS) + "/" + chapter.getFile_Name());
+                File file = new File(Environment.getExternalStorageDirectory() + "/" + chapter.getFile_Name());
 
                 if (file.exists()) {
                   chapter.setFile_size(  bytesIntoHumanReadable(file.length()));
@@ -101,7 +100,7 @@ public class UnZipFile extends AsyncTask<String, String, String> {
                 }
 
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-                Uri uri = Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath());
+                Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath());
                 intent.setDataAndType(uri, "*/*");
                 context.startActivity(intent);
             }
